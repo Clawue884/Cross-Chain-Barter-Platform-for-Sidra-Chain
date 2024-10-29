@@ -1,0 +1,10 @@
+Unit Test untuk kontrak pintar di atas.
+
+Cross-Chain Testing: Uji aliran dari satu blockchain ke blockchain lainnya untuk memastikan integrasi bridge berjalan lancar.
+
+End-to-End Testing untuk memastikan sistem berfungsi sesuai yang diharapkan.
+
+
+Deployment
+
+Deploy smart contract di jaringan uji seperti Ropsten atau Testnet BSC, kemudian implementasikan di jaringan utama setelah semua pengujian sukses.
