@@ -1,0 +1,18 @@
+const express = require('express');
+const app = express();
+const axios = require('axios');
+
+// Fungsi contoh untuk menghubungkan ke sidra chain API
+app.get('/sidra chain/balance/:userId', async (req, res) => {
+    const userId = req.params.userId;
+    try {
+        const response = await axios.get(`https://api.pi.network/v1/users/${userId}/balance`);
+        res.json(response.data);
+    } catch (error) {
+        res.status(500).json({ error: 'Gagal mengambil saldo dari Pi Network.' });
+    }
+});
+
+app.listen(3000, () => {
+    console.log('Server berjalan di port 3000');
+});
