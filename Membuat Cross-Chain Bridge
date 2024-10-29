@@ -1,0 +1,23 @@
+const Web3 = require('web3');
+
+// URL RPC untuk blockchain
+const web3Main = new Web3('https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID');
+const web3Test = new Web3('https://ropsten.infura.io/v3/YOUR_INFURA_PROJECT_ID');
+
+// Fungsi untuk memindahkan data antar-chain
+async function moveAssetAcrossChain(sender, receiver, amount) {
+    const balance = await web3Main.eth.getBalance(sender);
+    if (balance < amount) {
+        console.log("Saldo tidak mencukupi.");
+        return;
+    }
+
+    const tx = {
+        from: sender,
+        to: receiver,
+        value: web3.utils.toWei(amount.toString(), 'ether'),
+    };
+
+    const receipt = await web3Main.eth.sendTransaction(tx);
+    console.log(`Transaksi berhasil, hash: ${receipt.transactionHash}`);
+}
