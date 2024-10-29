@@ -1,0 +1,16 @@
+Blockchain Platform: Tentukan platform blockchain yang akan digunakan. Anda bisa menggunakan Ethereum, Binance Smart Chain, atau Cosmos SDK untuk cross-chain bridge.
+
+SDK: Anda perlu menginstal SDK untuk jaringan yang ingin Anda gunakan. Contoh: web3.js untuk Ethereum.
+
+sidra chain api:memiliki infrastruktur yang tertutup, Anda perlu memastikan akses ke API resmi atau metode yang diizinkan oleh pengembangnya.
+
+
+2. Arsitektur dan Desain Sistem
+
+1. On-chain: Gunakan smart contracts untuk memfasilitasi transfer token antar rantai.
+
+
+2. Off-chain: Gunakan server terpisah untuk mengelola proses off-chain seperti notifikasi, verifikasi pengguna, atau API pi network.
+
+
+3. Bridge: Diperlukan bridge untuk koneksi antar rantai, yang biasanya melibatkan validator atau relayers.
